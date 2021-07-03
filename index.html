@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="card bg-info text-white container">
+      <h1>BÀI TẬP 1: QUẢN LÝ TUYỂN SINH</h1>
+      <h3>Nhập vào các ô sau để xem kết quả thi</h3>
+      <div class="form-group w-25 pr-auto">
+        <label for=""></label>Điểm chuẩn Hội Đồng
+        <input type="number" class="form-control" id="diemChuan" />
+        <label for=""></label>Điểm môn Toán
+        <input type="number" class="form-control" id="diemToan" />
+        <label for=""></label>Điểm môn Lý
+        <input type="number" class="form-control" id="diemLy" />
+        <label for=""></label>Điểm môn Hoá
+        <input type="number" class="form-control" id="diemHoa" />
+      </div>
+      <div class="form-group">
+        <label for="khuVuc"
+          >Chọn khu vực ưu tiên (X nếu không thuộc khu vực ưu tiên</label
+        >
+        <select class="form-control w-25 mr-auto" name="khuVuc" id="khuVuc">
+          <option>X</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+        <label for="doiTuong"
+          >Chọn nhóm đối tượng ưu tiên (0 nếu không thuộc đối tượng ưu
+          tiên</label
+        >
+        <select class="form-control w-25 mr-auto" name="doiTuong" id="doiTuong">
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <button id="submit" type="button" class="btn btn-primary">
+          Submit
+        </button>
+        <div id="xuatKetQua" class="bg-success" style="display: none"></div>
+      </div>
+    </div>
+
+    <script src="./js/Bai-tap-1.js"></script>
+    <script src="./js/Bai-tap-2.js"></script>
+    <script src="./js/Bai-tap-3.js"></script>
+    <script src="./js/Bai-tap-4.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
