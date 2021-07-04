@@ -28,7 +28,7 @@
       </div>
       <div class="form-group">
         <label for="khuVuc"
-          >Chọn khu vực ưu tiên (X nếu không thuộc khu vực ưu tiên</label
+          >Chọn khu vực ưu tiên (X nếu không thuộc khu vực ưu tiên)</label
         >
         <select class="form-control w-25 mr-auto" name="khuVuc" id="khuVuc">
           <option>X</option>
@@ -38,7 +38,7 @@
         </select>
         <label for="doiTuong"
           >Chọn nhóm đối tượng ưu tiên (0 nếu không thuộc đối tượng ưu
-          tiên</label
+          tiên)</label
         >
         <select class="form-control w-25 mr-auto" name="doiTuong" id="doiTuong">
           <option>0</option>
@@ -50,6 +50,21 @@
           Submit
         </button>
         <div id="xuatKetQua" class="bg-success" style="display: none"></div>
+      </div>
+    </div>
+
+    <div class="card bg-warning text-white container">
+      <h1>BÀI TẬP 2: TÍNH TIỀN ĐIỆN</h1>
+      <h3>Nhập vào tên khách hàng và khối lượng điện tiêu thụ</h3>
+      <div class="form-group w-50 pr-auto">
+        <label for=""></label>Tên khách hàng
+        <input type="text" class="form-control" id="tenKH" />
+        <label for=""></label>Khối lượng điện tiêu thụ
+        <input type="number" class="form-control" id="khoiLuong" />
+        <button id="tinhTienDien" type="button" class="btn btn-primary">
+          Tính tiền điện
+        </button>
+        <div id="xuatThongTin" class="bg-success" style="display: none"></div>
       </div>
     </div>
 
