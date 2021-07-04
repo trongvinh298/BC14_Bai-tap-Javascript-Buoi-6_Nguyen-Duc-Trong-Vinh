@@ -59,7 +59,7 @@
       <div class="form-group w-50 pr-auto">
         <label for=""></label>Tên khách hàng
         <input type="text" class="form-control" id="tenKH" />
-        <label for=""></label>Khối lượng điện tiêu thụ
+        <label for=""></label>Khối lượng điện tiêu thụ (kW)
         <input type="number" class="form-control" id="khoiLuong" />
         <button id="tinhTienDien" type="button" class="btn btn-primary">
           Tính tiền điện
@@ -76,7 +76,7 @@
       <div class="form-group w-50 pr-auto">
         <label for=""></label>Tên khách hàng
         <input type="text" class="form-control" id="hoTenKH" />
-        <label for=""></label>Tổng thu nhập năm
+        <label for=""></label>Tổng thu nhập năm (VND)
         <input type="number" class="form-control" id="tongThuNhap" />
         <label for=""></label>Số người phụ thuộc
         <input type="number" class="form-control" id="nguoiPhuThuoc" />
@@ -85,6 +85,28 @@
           Tính thuế
         </button>
         <div id="xuatThue" class="bg-success" style="display: none"></div>
+      </div>
+    </div>
+
+    <div class="card bg-warning text-white container">
+      <h1>BÀI TẬP 4: TÍNH TIỀN CÁP</h1>
+      <div class="form-group w-50 pr-auto">
+        <label for="">Chọn loại khách hàng</label>
+        <select class="form-control" name="loaiKH" id="loaiKH">
+          <option value="nhaDan">Nhà dân</option>
+          <option value="doanhNghiep">Doanh Nghiệp</option>
+        </select>
+        <label for=""></label>Mã khách hàng
+        <input type="text" class="form-control" id="maKH" />
+        <label for=""></label>Số kết nối
+        <input type="number" class="form-control" id="soKetNoi" />
+        <label for=""></label>Số kênh cao cấp
+        <input type="number" class="form-control" id="soKenhCC" />
+
+        <button id="xuatHoaDon" type="button" class="btn btn-primary">
+          Xuất hoá đơn
+        </button>
+        <div id="hoaDon" class="bg-info" style="display: none"></div>
       </div>
     </div>
 

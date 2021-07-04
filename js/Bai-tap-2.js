@@ -32,6 +32,7 @@ function tinhTienDien() {
   xuatTen.innerHTML = "Tên khách hàng : " + tenKH;
   var xuatTien = document.createElement("p");
   xuatTien.innerHTML = "Tổng tiền điện : " + tongTienDien + " VND";
+  xuatThongTin.innerHTML = "";
   xuatThongTin.appendChild(xuatTen);
   xuatThongTin.appendChild(xuatTien);
 }

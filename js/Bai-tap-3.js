@@ -27,6 +27,7 @@ function tinhThue() {
   xuatHoTen.innerHTML = "Họ tên khách hàng: " + hoTenKH;
   var xuatTienThue = document.createElement("p");
   xuatTienThue.innerHTML = "Tiền thuế thu nhập cá nhân :" + thueSuat + " VND";
+  xuatThue.innerHTML = "";
   xuatThue.appendChild(xuatHoTen);
   xuatThue.appendChild(xuatTienThue);
 }

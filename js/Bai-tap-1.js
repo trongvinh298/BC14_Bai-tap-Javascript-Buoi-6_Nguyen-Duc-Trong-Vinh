@@ -13,6 +13,7 @@ function xuatKetQua() {
   xuatKetQua.style.display = "block";
   var ketQua = document.createElement("span");
   var xuatDiemTong = document.createElement("span");
+  xuatKetQua.innerHTML = "";
   xuatKetQua.appendChild(ketQua);
   xuatKetQua.appendChild(xuatDiemTong);
   switch (khuVuc) {
