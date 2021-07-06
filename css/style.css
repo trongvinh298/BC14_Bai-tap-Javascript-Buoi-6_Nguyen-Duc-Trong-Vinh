@@ -1,0 +1,26 @@
+body {
+  margin-left: 30px;
+}
+#xuatKetQua {
+  background-color: rgb(161, 210, 219);
+  color: rgb(70, 94, 104);
+  border-radius: 5px;
+}
+#xuatTong {
+  background-color: rgb(233, 170, 196);
+  height: 30px;
+  border-radius: 5px;
+}
+#xuatGiaiThua {
+  background-color: rgb(192, 238, 196);
+  height: 30px;
+  border-radius: 5px;
+}
+#divCha {
+  background-color: black;
+  min-height: 30px;
+  height: auto;
+}
+.col-6 {
+  padding-bottom: 30px;
+}

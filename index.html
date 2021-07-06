@@ -11,102 +11,57 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="card bg-info text-white container">
-      <h1>BÀI TẬP 1: QUẢN LÝ TUYỂN SINH</h1>
-      <h3>Nhập vào các ô sau để xem kết quả thi</h3>
-      <div class="form-group w-25 pr-auto">
-        <label for=""></label>Điểm chuẩn Hội Đồng
-        <input type="number" class="form-control" id="diemChuan" />
-        <label for=""></label>Điểm môn Toán
-        <input type="number" class="form-control" id="diemToan" />
-        <label for=""></label>Điểm môn Lý
-        <input type="number" class="form-control" id="diemLy" />
-        <label for=""></label>Điểm môn Hoá
-        <input type="number" class="form-control" id="diemHoa" />
+    <div class="row mt-5">
+      <div class="col-6">
+        <h1>BÀI TẬP 1:</h1>
+        <button id="xuatN" class="btn btn-primary">Xuất n</button>
+        <div
+          id="xuatKetQua"
+          class="text-black w-50 py-3 px-3 my-3"
+          style="display: none"
+        ></div>
       </div>
-      <div class="form-group">
-        <label for="khuVuc"
-          >Chọn khu vực ưu tiên (X nếu không thuộc khu vực ưu tiên)</label
-        >
-        <select class="form-control w-25 mr-auto" name="khuVuc" id="khuVuc">
-          <option>X</option>
-          <option>A</option>
-          <option>B</option>
-          <option>C</option>
-        </select>
-        <label for="doiTuong"
-          >Chọn nhóm đối tượng ưu tiên (0 nếu không thuộc đối tượng ưu
-          tiên)</label
-        >
-        <select class="form-control w-25 mr-auto" name="doiTuong" id="doiTuong">
-          <option>0</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-        </select>
-        <button id="submit" type="button" class="btn btn-primary">
-          Submit
-        </button>
-        <div id="xuatKetQua" class="bg-success" style="display: none"></div>
+      <div class="col-6">
+        <h1>BÀI TẬP 2:</h1>
+        <div class="form-group w-50">
+          <input
+            type="text"
+            id="nhapX"
+            class="form-control mb-2"
+            placeholder="Nhập số x"
+          />
+          <input
+            type="text"
+            id="nhapN"
+            class="form-control"
+            placeholder="Nhập số n"
+          />
+        </div>
+        <div id="xuatTong" class="w-50 mb-3 px-2"></div>
+        <button id="tinhTong" class="btn btn-danger">Tính tổng</button>
       </div>
-    </div>
-
-    <div class="card bg-warning text-white container">
-      <h1>BÀI TẬP 2: TÍNH TIỀN ĐIỆN</h1>
-      <h3>Nhập vào tên khách hàng và khối lượng điện tiêu thụ</h3>
-      <div class="form-group w-50 pr-auto">
-        <label for=""></label>Tên khách hàng
-        <input type="text" class="form-control" id="tenKH" />
-        <label for=""></label>Khối lượng điện tiêu thụ (kW)
-        <input type="number" class="form-control" id="khoiLuong" />
-        <button id="tinhTienDien" type="button" class="btn btn-primary">
-          Tính tiền điện
+      <div class="col-6">
+        <h1>BÀI TẬP 3:</h1>
+        <div class="form-group w-50 my-2">
+          <input
+            type="text"
+            id="nhapSoN"
+            class="form-control"
+            placeholder="Nhập số n"
+          />
+        </div>
+        <div id="xuatGiaiThua" class="w-50 mb-3 px-2"></div>
+        <button id="tinhGiaiThua" class="btn btn-success">
+          Tính Giai Thừa
         </button>
-        <div id="xuatThongTin" class="bg-success" style="display: none"></div>
       </div>
-    </div>
-
-    <div class="card bg-info text-white container">
-      <h1>BÀI TẬP 3: TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
-      <h3>
-        Nhập vào họ tên khách hàng, tổng thu nhập năm và số người phụ thuộc
-      </h3>
-      <div class="form-group w-50 pr-auto">
-        <label for=""></label>Tên khách hàng
-        <input type="text" class="form-control" id="hoTenKH" />
-        <label for=""></label>Tổng thu nhập năm (VND)
-        <input type="number" class="form-control" id="tongThuNhap" />
-        <label for=""></label>Số người phụ thuộc
-        <input type="number" class="form-control" id="nguoiPhuThuoc" />
-
-        <button id="tinhThue" type="button" class="btn btn-primary">
-          Tính thuế
-        </button>
-        <div id="xuatThue" class="bg-success" style="display: none"></div>
-      </div>
-    </div>
-
-    <div class="card bg-warning text-white container">
-      <h1>BÀI TẬP 4: TÍNH TIỀN CÁP</h1>
-      <div class="form-group w-50 pr-auto">
-        <label for="">Chọn loại khách hàng</label>
-        <select class="form-control" name="loaiKH" id="loaiKH">
-          <option value="nhaDan">Nhà dân</option>
-          <option value="doanhNghiep">Doanh Nghiệp</option>
-        </select>
-        <label for=""></label>Mã khách hàng
-        <input type="text" class="form-control" id="maKH" />
-        <label for=""></label>Số kết nối
-        <input type="number" class="form-control" id="soKetNoi" />
-        <label for=""></label>Số kênh cao cấp
-        <input type="number" class="form-control" id="soKenhCC" />
-
-        <button id="xuatHoaDon" type="button" class="btn btn-primary">
-          Xuất hoá đơn
-        </button>
-        <div id="hoaDon" class="bg-info" style="display: none"></div>
+      <div class="col-6">
+        <h1>BÀI TẬP 4:</h1>
+        <div id="divCha" class="w-50 mb-3 px-2 py-2"></div>
+        <button id="taoDiv" class="btn btn-success">Tạo div</button>
       </div>
     </div>
 

@@ -1,39 +1,21 @@
-// Bài tập 4 : Tính tiền cáp
-var loaiKH = document.getElementById("loaiKH");
-window.onload = function () {
-  if (loaiKH.value === "nhaDan") {
-    document.getElementById("soKetNoi").disabled = true;
-  }
-};
-loaiKH.addEventListener("change", anHien);
-function anHien() {
-  if (loaiKH.value === "nhaDan") {
-    document.getElementById("soKetNoi").disabled = true;
-  } else {
-    document.getElementById("soKetNoi").disabled = false;
-  }
-}
+document.getElementById("taoDiv").addEventListener("click", taoDiv);
+var divCha = document.getElementById("divCha");
+var divCon;
 
-document.getElementById("xuatHoaDon").addEventListener("click", tinhTienCap);
-function tinhTienCap() {
-  var maKH = document.getElementById("maKH").value;
-  var soKetNoi = document.getElementById("soKetNoi").value;
-  var soKenhCC = document.getElementById("soKenhCC").value;
-  var hoaDon = document.getElementById("hoaDon");
-  var tongTienCap;
-  hoaDon.style.display = "block";
-  if (loaiKH.value === "nhaDan") {
-    tongTienCap = 4.5 + 20.5 + 7.5 * soKenhCC;
-  } else {
-    if (soKetNoi > 0 && soKetNoi <= 10) {
-      tongTienCap = 15 + 75 * soKetNoi + 50 * soKenhCC;
+function taoDiv() {
+  for (var i = 1; i <= 10; i++) {
+    if (Math.floor(i / 2) !== i / 2) {
+      divCon = document.createElement("div");
+      divCon.innerHTML = "Div lẻ " + i;
+      divCon.style.backgroundColor = "blue";
+      divCon.style.color = "white";
+      divCha.appendChild(divCon);
     } else {
-      tongTienCap = 15 + 75 * 10 + 5 * (soKetNoi - 10) + 50 * soKenhCC;
+      divCon = document.createElement("div");
+      divCon.innerHTML = "Div chẵn " + i;
+      divCon.style.backgroundColor = "red";
+      divCon.style.color = "white";
+      divCha.appendChild(divCon);
     }
   }
-  var inHoaDon = document.createElement("p");
-  inHoaDon.innerHTML =
-    "Mã Khách Hàng : " + maKH + " Tổng số tiền cáp: " + tongTienCap + " $";
-  hoaDon.innerHTML = "";
-  hoaDon.appendChild(inHoaDon);
 }
